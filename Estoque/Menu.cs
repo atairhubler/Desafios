@@ -91,11 +91,17 @@ namespace ControleDeEstoque
         {
             Console.WriteLine("Digite o nome do produto que deseja cadastrar ou digite voltar para voltar ao menu principal\n");
             string nomeProduto = Console.ReadLine()!;
-            if (nomeProduto != "voltar")
+            string nomeProdutoMinusculo = nomeProduto.ToLower();
+            if (nomeProdutoMinusculo != "voltar")
             {
                 Produto novoProduto = new();
                 novoProduto.nomeProduto = nomeProduto;
-                //Preciso ver como aplicar ToLower para o nome voltar ficar em minusculo
+                listaDeProduto.Add(novoProduto);
+                Console.WriteLine($"\nProduto {nomeProduto} cadastrado com sucesso!\n\nDigite qualquer tecla para continuar.");
+                Console.ReadKey();
+                Console.Clear();
+                CadastrarProduto();
+                
             }
             else
             {
@@ -120,7 +126,17 @@ namespace ControleDeEstoque
         }
         public void ListaProdutos()
         {
+            Console.WriteLine("Abaixo a lista de produtos cadastrados!!\n");
+            int contagem = 1;
 
+            foreach (Produto listarProdutos in listaDeProduto)
+            {
+                Console.WriteLine($"{contagem++} {listarProdutos.nomeProduto}");
+            }
+            Console.WriteLine("\nDigite qualquer tecla para voltar ao menu");
+            Console.ReadKey();
+            Console.Clear();
+            MenuPrincipal();
         }
 
     }
