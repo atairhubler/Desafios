@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace CatalogoDeJogos
 {
-    internal class Jogo
+    public class Jogo
     {
+
+        public Jogo(string nome, string gender)
+        {
+            this.Nome = nome;
+            this.Gender = gender;
+        }
+
+        public string Nome {  get; }
+        public string Gender { get; }
     }
 }
