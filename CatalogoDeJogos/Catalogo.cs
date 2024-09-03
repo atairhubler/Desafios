@@ -7,21 +7,6 @@ using System.Threading.Tasks;
 
 namespace CatalogoDeJogos
 {
-    public class Catalogo
-    {
 
-        public void AdicionarJogo()
-        {
-            jogoList.Add(mario);
-        }
-        public void RemoverJogo()
-        {
-
-        }
-        public void ListaDejogos()
-        {
-
-        }
-
-    }
 }
+

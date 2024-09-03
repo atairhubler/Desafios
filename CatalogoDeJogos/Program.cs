@@ -2,13 +2,10 @@
 
 
 
-using CatalogoDeJogos;
 
 
-Jogo mario = new Jogo("Mario", "Aventura");
 
-List<Jogo> jogoList = new List<Jogo>();
-jogoList.Add(mario);
+
 
 
 

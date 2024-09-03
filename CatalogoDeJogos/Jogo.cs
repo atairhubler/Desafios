@@ -15,7 +15,36 @@ namespace CatalogoDeJogos
             this.Gender = gender;
         }
 
-        public string Nome {  get; }
+        public string Nome { get; }
         public string Gender { get; }
     }
+
+    public class Lista
+    {
+        public void CriandoLista()
+        {
+           List<Jogo> listaDeJogos = new List<Jogo>();
+        }
+    }
+
+
+
+    public class CatalogoDeJogosFuncoes
+    {
+         void AdicionarJogo(Jogo NovoJogo)
+        {
+          
+        }
+        void RemoverJogo()
+        {
+
+        }
+        void ListaDejogos()
+        {
+
+        }
+
+    }
+
+
 }
