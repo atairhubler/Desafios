@@ -8,6 +8,7 @@ namespace CatalogoDeJogos
 {
     public class Jogo
     {
+        public List<Jogo> listaDeJogos = new List<Jogo>();
 
         public Jogo(string nome, string gender)
         {
@@ -17,34 +18,17 @@ namespace CatalogoDeJogos
 
         public string Nome { get; }
         public string Gender { get; }
+        void AdicionarJogo(Jogo NovoJogo)
+        {
+            listaDeJogos.Add(NovoJogo);
+        }
+        void RemoverJogo(Jogo RemoverJogo)
+        {
+            listaDeJogos.Remove(RemoverJogo);
+        }
+        void ListaDejogos(Jogo ListaDejogos)
+        {
+
+        }
     }
-
-    public class Lista
-    {
-        public void CriandoLista()
-        {
-           List<Jogo> listaDeJogos = new List<Jogo>();
-        }
-    }
-
-
-
-    public class CatalogoDeJogosFuncoes
-    {
-         void AdicionarJogo(Jogo NovoJogo)
-        {
-          
-        }
-        void RemoverJogo()
-        {
-
-        }
-        void ListaDejogos()
-        {
-
-        }
-
-    }
-
-
 }
