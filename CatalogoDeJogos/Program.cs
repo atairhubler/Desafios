@@ -1,9 +1,40 @@
 ﻿
 
 
+public class Catalogo()
+{
+    
+    public class jogo
+    {
+        public jogo(string Name, string Category)
+        {
+            name = Name;
+            category = Category;
+
+        }
+
+        public string name { get; }
+        public string category { get; }
+    }
+    public void AdicionarJogo(List<jogo> listaDeJogos,jogo novoJogo)
+    {
+        listaDeJogos.Add(novoJogo);   
+    }
+    public void RemoverJogo(List<jogo> listaDejogos,jogo removerJogo)
+    {
+        listaDejogos.Remove(removerJogo);
+    }
+
+    public void ListaJogos(List<jogo> listaJogos)
+    {
+        foreach (jogo jogo in listaJogos)
+        {
+            Console.WriteLine($"Nome:{jogo.name} Categoria: {jogo.category}");
+        }
+    }
 
 
-
+}
 
 
 
@@ -32,7 +63,5 @@ Catalogo
     Metodo adicionar jogo
     Metodo remover jogo
     Metodo mostrar lista de jogos
-
-
 
 */
