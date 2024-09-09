@@ -1,50 +1,34 @@
 ﻿
 
+using CatalogoDeJogos;
+using static CatalogoDeJogos.CatalogoDeJogosC;
 
-public class Catalogo()
+
+class Program
 {
-    
-    public class jogo
+    static void Main(string[] args)
     {
-        public jogo(string Name, string Category)
+
+        var catalogo1 = new CatalogoDeJogosC();
+
+        List<Jogo> primeiraLista = new List<Jogo>
         {
-            name = Name;
-            category = Category;
+            new Jogo ("Mario"),
+            new Jogo ("Pubg"),
+            new Jogo ("DeadLock")
 
-        }
+        };
 
-        public string name { get; }
-        public string category { get; }
+        catalogo1.ListarJogos(primeiraLista);
+
+        //catalogo1.CriarNovoJogo("Mario", primeiraLista);
+        //catalogo1.CriarNovoJogo("Pubg", primeiraLista);
+        //catalogo1.CriarNovoJogo("DeadLock", primeiraLista);
+
+
+
     }
-    public void AdicionarJogo(List<jogo> listaDeJogos,jogo novoJogo)
-    {
-        listaDeJogos.Add(novoJogo);   
-    }
-    public void RemoverJogo(List<jogo> listaDejogos,jogo removerJogo)
-    {
-        listaDejogos.Remove(removerJogo);
-    }
-
-    public void ListaJogos(List<jogo> listaJogos)
-    {
-        foreach (jogo jogo in listaJogos)
-        {
-            Console.WriteLine($"Nome:{jogo.name} Categoria: {jogo.category}");
-        }
-    }
-
-
 }
-
-
-
-
-
-
-
-
-
-
 
 /*
  
